@@ -92,18 +92,6 @@ def db_delete_all():
         db.commit()
 
 
-
-# Тестовый код
 if __name__ == '__main__':
     db_start()
     db_insert_random()
-    # db_insert(2, "Ayk", "Galstyan", 21, "+7(999)999-99-99")
-
-    # db_update(2, "Ayk", "Galstyan", 21, "+7(918)450-99-99")
-    # db_delete(1)
-    #
-    #
-    # for i in db_select():
-    #     print(*i)
-
-    # db_delete('Мастер и Маргарита')
