@@ -18,9 +18,6 @@ def db_start():
                         job_title TEXT,
                         gender TEXT)""")
 
-        # Сохраняем изменения
-        db.commit()
-
 
 # Вставка записи в таблицу user
 def db_insert_random(num=100):
@@ -67,8 +64,7 @@ def db_update(user_id, name, fname, age, phone, job_title, gender):
 def db_select():
     with sq.connect('data/user.db') as db:
         cursor = db.cursor()
-        users = cursor.execute("SELECT * FROM user").fetchall()
-        return users
+        return cursor.execute("SELECT * FROM user").fetchall()
 
 
 # Удаление записи из таблицы по названию
